@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="./css/another.css">
+	<title>Document</title>
+</head>
+
+<body>
+	<div class="container">
+
+		<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque, odit? Fugiat nam, at ut nesciunt dolor
+			iure dolores. Repellat unde officiis tempore iste quibusdam excepturi, perferendis fugit qui eveniet
+			obcaecati!</p>
+
+		<button data-modal-open><img src="./img/141038.jpg" width=480 alt=""></button>
+
+		<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perferendis iste delectus animi fuga error
+			assumenda in repellat minus voluptatum! Veniam error quo facilis adipisci laudantium nulla quidem,
+			soluta perferendis odit.</p>
+
+		<div class="backdrop is-hidden" data-modal>
+			<div class="modal">
+				<img src="./img/141038.jpg" width=1024 alt="">
+				<button data-modal-close>Закрыть</button>
+			</div>
+
+		</div>
+	</div>
+
+	<script>
+		const refs = {
+			openModalBtn: document.querySelector('[data-modal-open]'),
+			closeModalBtn: document.querySelector('[data-modal-close]'),
+			modal: document.querySelector('[data-modal]'),
+		};
+
+		refs.openModalBtn.addEventListener('click', toggleModal);
+		refs.closeModalBtn.addEventListener('click', toggleModal);
+
+		function toggleModal() {
+			refs.modal.classList.toggle('is-hidden');
+		}
+
+	</script>
+</body>
+
+</html>
